@@ -23,13 +23,68 @@ const Dashboard = () => {
         </div>
         
         <ul className="mt-5 space-y-3 flex-1">
-          <li className="hover:bg-[#509CDB] p-2 rounded "><NavLink className={'flex items-center gap-4'} to="dashboard_home"><BiHome /> Dashboard</NavLink></li>
-          <li className="hover:bg-[#509CDB] p-2 rounded "><NavLink className={'flex items-center gap-4'} to="teachers"><GiTeacher /> Teachers</NavLink> </li>
-          <li className="hover:bg-[#509CDB] p-2 rounded "><NavLink className={'flex items-center gap-4'} to="students"><PiStudentBold /> Students</NavLink></li>
-          <li className="hover:bg-[#509CDB] p-2 rounded "><NavLink className={'flex items-center gap-4'} to="billing"><RiBankLine /> Billing</NavLink></li>
-          <li className="hover:bg-[#509CDB] p-2 rounded "><NavLink className={'flex items-center gap-4'} to="settings"><IoMdSettings /> Settings and profile</NavLink></li>
-          <li className="hover:bg-[#509CDB] p-2 rounded "><NavLink className={'flex items-center gap-4'} to="exams"><IoStatsChart /> Exams</NavLink></li>
-        </ul>
+  <li>
+    <NavLink 
+      className={({ isActive }) => 
+        `flex items-center gap-4 p-2 rounded ${isActive ? "bg-[#509CDB] text-white" : "hover:bg-[#509CDB]"}`
+      } 
+      to="dashboard_home"
+    >
+      <BiHome /> Dashboard
+    </NavLink>
+  </li>
+  <li>
+    <NavLink 
+      className={({ isActive }) => 
+        `flex items-center gap-4 p-2 rounded ${isActive ? "bg-[#509CDB] text-white" : "hover:bg-[#509CDB]"}`
+      } 
+      to="teachers"
+    >
+      <GiTeacher /> Teachers
+    </NavLink>
+  </li>
+  <li>
+    <NavLink 
+      className={({ isActive }) => 
+        `flex items-center gap-4 p-2 rounded ${isActive ? "bg-[#509CDB] text-white" : "hover:bg-[#509CDB]"}`
+      } 
+      to="students"
+    >
+      <PiStudentBold /> Students
+    </NavLink>
+  </li>
+  <li>
+    <NavLink 
+      className={({ isActive }) => 
+        `flex items-center gap-4 p-2 rounded ${isActive ? "bg-[#509CDB] text-white" : "hover:bg-[#509CDB]"}`
+      } 
+      to="billing"
+    >
+      <RiBankLine /> Billing
+    </NavLink>
+  </li>
+  <li>
+    <NavLink 
+      className={({ isActive }) => 
+        `flex items-center gap-4 p-2 rounded ${isActive ? "bg-[#509CDB] text-white" : "hover:bg-[#509CDB]"}`
+      } 
+      to="settings"
+    >
+      <IoMdSettings /> Settings and profile
+    </NavLink>
+  </li>
+  <li>
+    <NavLink 
+      className={({ isActive }) => 
+        `flex items-center gap-4 p-2 rounded ${isActive ? "bg-[#509CDB] text-white" : "hover:bg-[#509CDB]"}`
+      } 
+      to="exams"
+    >
+      <IoStatsChart /> Exams
+    </NavLink>
+  </li>
+</ul>
+
         
         <div className='flex items-center gap-4 pb-20'>
           <RiBankLine /> <p>Features</p>
@@ -38,7 +93,7 @@ const Dashboard = () => {
       </aside>
 
       <div className="flex-1 flex flex-col"> 
-        {/* ✅ Navbar Teachers sahifasida yashirinadi */}
+ 
         {!isTeachersPage && (
           <div className="w-full bg-white shadow-md">
             <Navbar />
