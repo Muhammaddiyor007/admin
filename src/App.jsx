@@ -1,5 +1,5 @@
 import './index.css';
-import Login from './components/login';
+import Login from './components/Login';
 import Home from './pages/Home';
 import Signup from './components/Signup'
 import Dashboard from './components/Dashboard'
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/signup' element={<Signup/>} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/login' element={<Login/>} />
         <Route path='/dashboard' element ={<Dashboard/>}>
 
         <Route path='dashboard_home' element={<Dashboard_home/>}/>
