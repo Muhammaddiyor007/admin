@@ -1,6 +1,7 @@
 import './index.css';
 import Login from './components/login';
 import Home from './pages/Home';
+import Signup from './components/Signup'
 import Dashboard from './components/Dashboard'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Teachers from './components/Teachers';
@@ -9,7 +10,6 @@ import Dashboard_home from './components/Dashboard_home';
 import Billing from './components/Billing';
 import Settings from './components/Settings';
 import Exams from './components/Exams';
-import Signup from './components/Signup';
 
 
 function App() {
