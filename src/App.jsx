@@ -9,7 +9,7 @@ import Dashboard_home from './components/Dashboard_home';
 import Billing from './components/Billing';
 import Settings from './components/Settings';
 import Exams from './components/Exams';
-import Signup from './components/signup';
+import Signup from './components/Signup';
 
 
 function App() {
