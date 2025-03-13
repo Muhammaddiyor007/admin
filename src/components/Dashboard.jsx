@@ -11,7 +11,7 @@ import { IoStatsChart } from "react-icons/io5";
 
 const Dashboard = () => {
   const location = useLocation();
-  const isTeachersPage = location.pathname.includes("teachers"); // ✅ Agar "teachers" so'zi bo'lsa, true qaytaradi
+  const isTeachersPage = location.pathname.includes("teachers");
 
   return (
     <div className="flex h-screen"> 
