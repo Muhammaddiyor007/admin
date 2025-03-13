@@ -4,7 +4,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import Logo from '../assets/Logo-image.svg'
 import { BiHome } from "react-icons/bi";
 import { GiTeacher } from "react-icons/gi";
-import { PiStudentBold } from "react-icons/pi";
+import { RiGraduationCapLine } from "react-icons/ri";
 import { RiBankLine } from "react-icons/ri";
 import { IoMdSettings } from "react-icons/io";
 import { IoStatsChart } from "react-icons/io5";
@@ -50,7 +50,7 @@ const Dashboard = () => {
       } 
       to="students"
     >
-      <PiStudentBold /> Students
+      <RiGraduationCapLine /> Students
     </NavLink>
   </li>
   <li>
