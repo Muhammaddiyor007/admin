@@ -12,7 +12,7 @@ const Teachers = () => {
       </div>
       <div className='flex justify-between items-center pb-5'>
         <h4 className='text-[#4F4F4F] text-[20px] font-semibold'>Teachers</h4>
-        <button className='bg-[#509CDB] rounded-[4px] text-white p-[14px]'>Add Teachers</button>
+        <button className='bg-sky-950 rounded-[4px] text-white p-[14px]'>Add Teachers</button>
       </div>
 
       <div className="relative w-full">
