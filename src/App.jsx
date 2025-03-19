@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Correct import
 import './index.css';
 import Login from './components/Login';
 import Home from './pages/Home';
@@ -23,7 +22,7 @@ function App() {
   ];
 
   return (
-    <Router>
+    <Router>  {/* Using BrowserRouter */}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/signup' element={<Signup />} />
