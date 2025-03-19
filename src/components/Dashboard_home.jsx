@@ -3,10 +3,13 @@ import { MdPerson } from "react-icons/md";
 import { RiBankLine } from "react-icons/ri";
 import { PiStudentBold } from "react-icons/pi";
 import Support from './Support';
+import Navbar from './Navbar';
 
 const Dashboard_home = () => {
   return (
-    <div className="relative " ><h1 className='px-[127.5px] text-[36px] font-semibold'>Welcome to your dashboard, Udemy school</h1>
+    <div className="relative " >
+        <Navbar/>
+    <h1 className='px-[127.5px] text-[36px] font-semibold pt-10'>Welcome to your dashboard, Udemy school</h1>
     <h3 className='px-[232px] py-6 font-semibold'>Uyo/school/@teachable.com</h3>
     <div className=' w-[758px] ml-[120px] px-[110px] flex flex-col gap-11'>
         <div className='flex gap-5'>

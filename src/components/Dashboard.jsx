@@ -35,7 +35,7 @@ const Dashboard = () => {
   return (
     <div className="flex">
       <aside
-        className={`overflow-auto px-2 h-screen sticky top-0 left-0 bg-sky-950 py-6 text-white flex flex-col transition-all duration-300 ${
+        className={`overflow-auto px-2 h-screen sticky top-0 left-0 bg-[#152259] py-6 text-white flex flex-col transition-all duration-300 ${
           sidebarOpen ? "w-60" : "w-16 items-center"
         }`}
       >
@@ -78,13 +78,13 @@ const Dashboard = () => {
         </div>
 
         <div className="flex items-center h-10">
-          <button
+          <Link to={"/signup"} className="w-full"><button
             onClick={() => alert("Logging out...")}
             className="flex w-full justify-center cursor-pointer items-center gap-3 py-2 px-3 rounded bg-red-500 hover:bg-red-600 transition-all"
           >
             <CiLogout className="w-5 h-5" />
             {sidebarOpen && <span>Log Out</span>}
-          </button>
+          </button></Link>
         </div>
       </aside>
 

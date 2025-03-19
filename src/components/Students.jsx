@@ -31,7 +31,7 @@ function UserCard({ user, onEdit, onDelete }) {
       <p>{user.surname}</p>
       <p>Age: {user.age}</p>
       <div className="flex space-x-4 mt-auto w-full justify-center pb-4 pt-4">
-        <button onClick={onEdit} className="text-sky-950 text-3xl flex items-center"><FaEdit className="mr-2" /> Edit</button>
+        <button onClick={onEdit} className="text-[#152259] text-3xl flex items-center"><FaEdit className="mr-2" /> Edit</button>
         <button onClick={onDelete} className="text-red-500 text-3xl flex items-center"><FaTrash className="mr-2" /> Delete</button>
       </div>
     </div>
@@ -79,7 +79,7 @@ export default function App() {
       </div>
       <div className="flex justify-between items-center pb-5">
         <h4 className='text-[#4F4F4F] text-[20px] font-semibold'>User List</h4>
-        <button onClick={() => { setFormData({ name: "", surname: "", age: "" }); setEditIndex(null); setModalOpen(true); }} className="bg-sky-950 text-white flex items-center mb-4 rounded-[4px] p-[14px]">
+        <button onClick={() => { setFormData({ name: "", surname: "", age: "" }); setEditIndex(null); setModalOpen(true); }} className="bg-[#152259] text-white flex items-center mb-4 rounded-[4px] p-[14px]">
           <FaPlus className="mr-2" /> Add User
         </button>
       </div>
