@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
 import { LanguageProvider } from "./context/LanguageContext";
 
@@ -17,85 +17,71 @@ import AddTeachers from "./components/AddTeachers";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 
-const users = [
-  {
-    id: 1,
-    name: "Muhammaddiyor",
-    surname: "Odiljonov",
-    age: 21,
-    email: "muhammadiyorodiljonov@gmail.com",
-    role: "Frontend Developer",
-  },
-  {
-    id: 2,
-    name: "Asadbek",
-    surname: "Ayubov",
-    age: 20,
-    email: "asadbekayubov@gmail.com",
-    role: "Frontend Developer",
-  },
-  {
-    id: 3,
-    name: "Qosimjon",
-    surname: "Omonov",
-    age: 21,
-    email: "qosimjonomonov@gmail.com",
-    role: "Full-Stack Developer",
-  },
-  {
-    id: 4,
-    name: "Islombek",
-    surname: "Xalimjonov",
-    age: 20,
-    email: "islombekxalimjonov@gmail.com",
-    role: "UI/UX Designer",
-  },
-  {
-    id: 5,
-    name: "Muhammadrasul",
-    surname: "G'ulomjonov",
-    age: 20,
-    email: "muhammadrasulg'ulomjonov@gmail.com",
-    role: "Mobile Developer",
-  },
-];
-
-function Layout() {
-  const location = useLocation();
-  const showThemeAndLanguage = ["/signup", "/login"].includes(location.pathname);
-
-  return (
-    <div>
-      {showThemeAndLanguage && (
-        <div>
-          <ThemeSwitcher />
-          <LanguageSwitcher />
-        </div>
-      )}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="dashboard_home" element={<Dashboard_home />} />
-          <Route path="teachers" element={<Teachers />} />
-          <Route path="add_teachers" element={<AddTeachers />} />
-          <Route path="students" element={<Students />} />
-          <Route path="billing" element={<Billing users={users} />} />
-          <Route path="settings" element={<Settings />} />
-          <Route path="exams" element={<Exams />} />
-        </Route>
-      </Routes>
-    </div>
-  );
-}
-
 function App() {
+ 
+  const users = [
+    {
+      id: 1,
+      name: "Muhammaddiyor",
+      surname: "Odiljonov",
+      age: 21,
+      email: "muhammadiyorodiljonov@gmail.com",
+      role: "Frontend Developer",
+    },
+    {
+      id: 2,
+      name: "Asadbek",
+      surname: "Ayubov",
+      age: 20,
+      email: "asadbekayubov@gmail.com",
+      role: "Frontend Developer",
+    },
+    {
+      id: 3,
+      name: "Qosimjon",
+      surname: "Omonov",
+      age: 21,
+      email: "qosimjonomonov@gmail.com",
+      role: "Full-Stack Developer",
+    },
+    {
+      id: 4,
+      name: "Islombek",
+      surname: "Xalimjonov",
+      age: 20,
+      email: "islombekxalimjonov@gmail.com",
+      role: "UI/UX Designer",
+    },
+    {
+      id: 5,
+      name: "Muhammadrasul",
+      surname: "G'ulomjonov",
+      age: 20,
+      email: "muhammadrasulg'ulomjonov@gmail.com",
+      role: "Mobile Developer",
+    },
+  ];
+
   return (
     <ThemeProvider>
       <LanguageProvider>
         <Router>
-          <Layout />
+          <ThemeSwitcher />
+          <LanguageSwitcher />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />}>
+              <Route path="dashboard_home" element={<Dashboard_home />} />
+              <Route path="teachers" element={<Teachers />} />
+              <Route path="add_teachers" element={<AddTeachers />} />
+              <Route path="students" element={<Students />} />
+              <Route path="billing" element={<Billing users={users} />} />
+              <Route path="settings" element={<Settings />} />
+              <Route path="exams" element={<Exams />} />
+            </Route>
+          </Routes>
         </Router>
       </LanguageProvider>
     </ThemeProvider>
