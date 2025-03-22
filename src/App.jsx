@@ -16,6 +16,10 @@ import Exams from "./components/Exams";
 import AddTeachers from "./components/AddTeachers";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import LanguageSwitcher from "./components/LanguageSwitcher";
+import DeveloperList from "./components/DeveloperList";
+import DeveloperDetail from "./components/DeveloperDetail";
+import AddPost from "./components/AddPost";
+
 
 function App() {
  
@@ -72,8 +76,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            <Route path="developer/:id" element={<DeveloperDetail />} />
+            <Route path="add-post" element={<AddPost />} />
             <Route path="/dashboard" element={<Dashboard />}>
               <Route path="dashboard_home" element={<Dashboard_home />} />
+              <Route path="developer_list" element={<DeveloperList />} />
               <Route path="teachers" element={<Teachers />} />
               <Route path="add_teachers" element={<AddTeachers />} />
               <Route path="students" element={<Students />} />

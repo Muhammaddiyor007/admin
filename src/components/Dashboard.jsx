@@ -7,6 +7,7 @@ import { RiGraduationCapLine, RiBankLine } from "react-icons/ri";
 import { IoMdSettings } from "react-icons/io";
 import { IoStatsChart } from "react-icons/io5";
 import { CiLogout } from "react-icons/ci";
+import { FaLaptopCode } from "react-icons/fa";
 import Navbar from "../components/Navbar"; 
 
 const Dashboard = () => {
@@ -25,6 +26,7 @@ const Dashboard = () => {
 
   const menuItems = [
     { to: "dashboard_home", icon: BiHome, label: "Dashboard" },
+    { to: "developer_list", icon: FaLaptopCode, label: "Developers" },
     { to: "teachers", icon: GiTeacher, label: "Teachers" },
     { to: "students", icon: RiGraduationCapLine, label: "Students" },
     { to: "billing", icon: RiBankLine, label: "Billing" },
